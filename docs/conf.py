@@ -24,9 +24,9 @@ copyright = u'2018, OpenNews and contributors (MIT license)'
 author = u'OpenNews and contributors (MIT license)'
 
 # The short X.Y version
-version = u'1.0.0'
+version = u'1.0.1'
 # The full version, including alpha/beta/rc tags
-release = u'1.0.0'
+release = u'1.0.1'
 
 
 # -- General configuration ---------------------------------------------------
