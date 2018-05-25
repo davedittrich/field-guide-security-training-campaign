@@ -14,7 +14,7 @@ There are a lot of different ways to frame a conversation about digital security
 
 The good news is that a lot of great trainers have already done the hard work of articulating foundational concepts for digital security work that then open the conversation up to other specific practice- and tools-based topics.
 
-Here are examples of lesson plans you might use to facilitate a first session with newsroom colleagues, along with brief explanations of when these framings can be most helpful.
+Here are examples of lesson plans you might use to facilitate a first session with {{ target_audience_lower }} colleagues, along with brief explanations of when these framings can be most helpful.
 
 ## How the Internet Works
 
@@ -44,7 +44,7 @@ This framing is helpful for groups where individual analysis is most appropriate
 
 Tactical Technology Collective’s [My Shadow](https://myshadow.org/train) includes a few great  activities and workshops crafted around the idea that people can more easily make sense of best practices if they start by talking about services people already use and the data that is being collected.
 
-This framing is particularly useful in newsrooms that cover low-risk topics but are interested in building digital security capacity. The activities are divided into 30-minute modules, which you should complement with discussions on the topic.
+This framing is particularly useful in {{ target_audience_lower }} that cover low-risk topics but are interested in building digital security capacity. The activities are divided into 30-minute modules, which you should complement with discussions on the topic.
 
 ## Reflecting on Existing Security Practices
 
@@ -56,7 +56,7 @@ This exercise isn't meant to be a stand-alone session, and can be a good warmup 
 
 Some digital security trainers have used Kvinna's [integrated security facilitation approach](http://www.integratedsecuritymanual.org/sites/default/files/samplestructure_0.pdf), based on the idea that collective discussions on what security means and the practices we already take to protect ourselves are a good way to continue building our security capacity.
 
-This framing can be helpful in newsrooms where security needs are much broader than what is typically covered in digital security curriculum. The lesson plan is intended for a session lasting two to four hours.
+This framing can be helpful in {{ target_audience_lower }}s where security needs are much broader than what is typically covered in digital security curriculum. The lesson plan is intended for a session lasting two to four hours.
 
 ## This is Awesome
 

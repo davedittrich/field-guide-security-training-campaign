@@ -1,4 +1,4 @@
-# Security in the Newsroom: Who are you?
+# Security in the {{ target_audience }}: Who are you?
 
 This is a living document and the most recent version can be found at: <https://goo.gl/7ojKpw>. This lesson plan, which covers Passwords and Two Factor Authentication is a great hour long brown-bag session that was shared with us by Alan Palazzolo at the Minneapolis Star Tribune. For other great overview lesson plans, take a look at:
 
@@ -13,7 +13,7 @@ There’s a login for everything these days. The default way to prove to compute
 
 ## Security
 
-A quick step back. Security comes in many forms, not just digital. There are lots of aspects to consider when it comes to your personal security, and many things to focus in on when talking about security in the newsroom. A few things to keep in mind about security in general:
+A quick step back. Security comes in many forms, not just digital. There are lots of aspects to consider when it comes to your personal security, and many things to focus in on when talking about security in the {{ target_audience_lower }}. A few things to keep in mind about security in general:
 
 -   It’s unfortunate, but more often than not, good security takes a bit of effort. And in practice, there is often a trade-off of what is easy and what is most secure.
 -   Good security does not rely on trust, though in practice it requires some.
@@ -32,7 +32,7 @@ Just to make sure we are all on the same page, here are some top-level words and
 -   **Password**: Usually a single word or short random set of characters used for authentication.
 -   **Passphrase**: A phrase used for authentication, usually at least a few words or a whole sentence. Note, that when we refer to good, secure “passwords”, we usually mean a passphrase.
 
-![customize](img/ch2_o01_02.png) -- this icon indicates that you should customize the section to your newsroom.
+![customize](img/ch2_o01_02.png) -- this icon indicates that you should customize the section to your {{ target_audience_lower }}.
 
 
 ![important](img/ch2_o01_01.png) -- If you see this icon, this is important.
@@ -85,7 +85,7 @@ Another useful way to get access to your LastPass account is with their mobile a
 You can also install [*stand-alone desktop applications*](https://lastpass.com/download.php) for LastPass.
 
 ![important](img/ch2_o01_02.png)
-**Does your newsroom have a policy that prevents users from installing software or plugins? How should users in your newsroom install?**
+**Does your {{ target_audience_lower }} have a policy that prevents users from installing software or plugins? How should users in your {{ target_audience_lower }} install?**
 
 
 ### Unique passwords
@@ -172,7 +172,7 @@ Common services that have the ability to turn on 2FA:
 -   LastPass
 -   and [*more*](https://twofactorauth.org/)
 
-![Customize This](img/ch2_o01_02.png) **If your newsroom has a two factor policy, include it here.**
+![Customize This](img/ch2_o01_02.png) **If your {{ target_audience_lower }} has a two factor policy, include it here.**
 
 ###  Choosing your second factor
 
@@ -281,9 +281,9 @@ Look for a lock icon near the website address. Similar to the following:
 
 ![HTTPS Lock icon](img/ch2_o01_04.png)
 
-## In the newsroom
+## In the {{ target_audience_lower }}
 
-What are specific considerations in the newsroom. Indirectly, any information or communications that can be accessed by a login is at stake; this may include a source’s identity, communication to colleagues, sensitive documents, etc.
+What are specific considerations in the {{ target_audience_lower }}. Indirectly, any information or communications that can be accessed by a login is at stake; this may include a source’s identity, communication to colleagues, sensitive documents, etc.
 
 ###  Research
 

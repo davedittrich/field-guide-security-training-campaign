@@ -12,15 +12,15 @@ This short guide describes some basics around how to think about security on beh
 
 Before we even talk about tools for taking confidential tips securely, there are some more basic issues to address.
 
-1. Who is going to maintain the page? If you’re reading this, the person maintaining the secure tip page for your newsroom might be you. Make sure you know what that entails, and that there's a plan in place for handing off ownership if you leave the newsroom.
+1. Who is going to maintain the page? If you’re reading this, the person maintaining the secure tip page for your {{ target_audience_lower }} might be you. Make sure you know what that entails, and that there's a plan in place for handing off ownership if you leave the {{ target_audience_lower }}.
 
-2.  The page should easily accessible, and under the newsroom's control. 
+2.  The page should easily accessible, and under the {{ target_audience_lower }}'s control.
 
 3.  Host secure tip pages with HTTPS, not over an unsecured HTTP connection. This prevents unwanted third parties from snooping on would-be sources’ connections to your tip page. If your site doesn't already default to HTTPS, address that first. Two excellent resources to help make the case: [The US CIO's excellent and thorough explanation](https://https.cio.gov/everything/), and [Chrome's Developer Blog](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https).
 
 4. HTTPS prevents an eavesdropper from sniffing out anything beyond the domain name, so your tips page should not be served from a dedicated subdomain (eg. https://tips.example.com), but on a subdirectory of your primary website (eg. https://www.example.com/tips).
 
-5. The newsroom should be prepared to advertise the tips page widely. A good tips page only works if people read it *before* reaching out.
+5. The {{ target_audience_lower }} should be prepared to advertise the tips page widely. A good tips page only works if people read it *before* reaching out.
 
 **So what goes on the page?**
 
@@ -48,7 +48,7 @@ The session on [scrubbing metadata from files](Chapter02-10-ScrubbingMetadata.ht
 
 **First Contact**
 
-If a source reached out over a work phone or email, they have already given their employer a metadata trail. This is sometimes called the "first contact problem," and there is no quick fix. This is why newsrooms have a responsibility to educate sources (and potential sources) before they reach out.
+If a source reached out over a work phone or email, they have already given their employer a metadata trail. This is sometimes called the "first contact problem," and there is no quick fix. This is why {{ target_audience_lower }}s have a responsibility to educate sources (and potential sources) before they reach out.
 
 Your tips page is a good place to offer that education.
 
@@ -99,19 +99,19 @@ When done properly, physical mail and [SecureDrop](https://securedrop.org/) can 
 
 + Postal mail. Regular old-fashioned postal service physical mail is a solid way to receive sensitive tips because sources don’t need to provide a return address. The U.S. postal service does [collect images of the exterior of paper mail](http://www.nytimes.com/2013/07/04/us/monitoring-of-snail-mail.html), so encourage sources to leave off the return address (or put it inside of the envelope). Physical mail can be a great way to send paper documents as well as electronic media, such as SD cards or small USB devices.
 
-    + Tradeoffs: The main drawback is that mail is one-time communication. If you advertise your office address for accepting tips, encourage sources to give you a way to reach them if you have questions. Also, many workplaces are able to see who accessed a particular document, as well as review individual printer usage: a tipster who prints out a sensitive document at work may be caught by their own infrastructure before the document even reaches a newsroom.
+    + Tradeoffs: The main drawback is that mail is one-time communication. If you advertise your office address for accepting tips, encourage sources to give you a way to reach them if you have questions. Also, many workplaces are able to see who accessed a particular document, as well as review individual printer usage: a tipster who prints out a sensitive document at work may be caught by their own infrastructure before the document even reaches a {{ target_audience_lower }}.
 
 + [SecureDrop](https://docs.securedrop.org/en/stable/index.html) is an encrypted submission system that can help news organizations receive documents and exchange messages with sources. SecureDrop uses the Tor anonymity network, which encrypts and bounces web traffic around the globe, making it much more difficult for eavesdroppers to determine the original source of a tip. This is one of the best options available for protecting confidentiality.
 
-  + Tradeoffs: Sources using SecureDrop don’t have to provide identifying information unless they choose to do so. This added protection for sources can sometimes present challenges for newsrooms that need to verify the legitimacy of an anonymous leak.
+  + Tradeoffs: Sources using SecureDrop don’t have to provide identifying information unless they choose to do so. This added protection for sources can sometimes present challenges for {{ target_audience_lower }}s that need to verify the legitimacy of an anonymous leak.
 
   + SecureDrop requires dedicated equipment and an administrator familiar with the basics of Linux and Bash shell. The SecureDrop docs provide a good overview of the process of [setting up SecureDrop](https://docs.securedrop.org/en/stable/index.html). It isn't a trivial undertaking -- this guide includes a whole [session on SecureDrop planning](Chapter02-11-SecureDrop.html). And while some individual reporters have their own SecureDrop instances -- [Bart Gellman](https://tcfmailvault.info/) and Wired’s [Kevin Poulsen](https://freedom.press/people/kevin-poulsen/) both do, in general SecureDrop should be an institutional tool.
 
 ## Security is your responsibility
 
-Conversations are only as secure as the least secure devices on your networks. Everyone in the newsroom should be educated about the risks of phishing and poor password hygiene.
+Conversations are only as secure as the least secure devices on your networks. Everyone in the {{ target_audience_lower }} should be educated about the risks of phishing and poor password hygiene.
 
-Learn more about [how to keep newsroom accounts safe from hijacking](https://source.opennews.org/guides/defending-accounts/).
+Learn more about [how to keep {{ target_audience_lower }} accounts safe from hijacking](https://source.opennews.org/guides/defending-accounts/).
 
 ## Sample Pages
 

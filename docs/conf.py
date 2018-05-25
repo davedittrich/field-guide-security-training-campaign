@@ -12,14 +12,28 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+from docutils import nodes
+from docutils.transforms import Transform
 
 # -- Project information -----------------------------------------------------
 
-project = u'The Field Guide to Security Training in the Newsroom'
+# Content audience differentiation. You can set an environment variable
+# to control the target audience label.
+#
+# $ export TARGET_AUDIENCE="Campaign"
+target_audience = os.environ.get('TARGET_AUDIENCE', "Newsroom")
+target_audience_lower = target_audience.lower()
+
+rst_prolog = """
+.. |target_audience|    replace:: {}
+.. |target_audience_lower| replace:: {}
+""".format(target_audience, target_audience_lower)
+
+project = u'The Field Guide to Security Training in the {}'.format(target_audience)
 copyright = u'2018, OpenNews and contributors (MIT license)'
 author = u'OpenNews and contributors (MIT license)'
 
@@ -76,6 +90,10 @@ pygments_style = 'sphinx'
 #
 html_theme = 'sphinx_rtd_theme'
 
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+html_logo = 'training-clipart-blue-button-training-hi.png'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -101,7 +119,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'TheFieldGuidetoSecurityTrainingintheNewsroomdoc'
+htmlhelp_basename = 'TheFieldGuidetoSecurityTraininginthe{}doc'.format(target_audience)
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -132,8 +150,11 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'TheFieldGuidetoSecurityTrainingintheNewsroom.tex', u'The Field Guide to Security Training in the Newsroom Documentation',
-     u'OpenNewsLabs', 'manual'),
+    (master_doc,
+    'TheFieldGuidetoSecurityTraininginthe{}.tex'.format(target_audience),
+    u'The Field Guide to Security Training in the {}'.format(target_audience),
+    [author],
+    'manual'),
 ]
 
 
@@ -142,8 +163,11 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'thefieldguidetosecuritytraininginthenewsroom', u'The Field Guide to Security Training in the Newsroom Documentation',
-     [author], 1)
+    (master_doc,
+    'thefieldguidetosecuritytraininginthe{}'.format(target_audience_lower),
+    u'The Field Guide to Security Training in the {}'.format(target_audience),
+    [author],
+    1)
 ]
 
 
@@ -153,8 +177,12 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'TheFieldGuidetoSecurityTrainingintheNewsroom', u'The Field Guide to Security Training in the Newsroom Documentation',
-     author, 'TheFieldGuidetoSecurityTrainingintheNewsroom', 'One line description of project.',
+    (master_doc,
+    'TheFieldGuidetoSecurityTraininginthe{}'.format(target_audience),
+    u'The Field Guide to Security Training in the {}'.format(target_audience),
+    author,
+    'TheFieldGuidetoSecurityTraininginthe{}'.format(target_audience),
+    'This field guide provides training information for the {}.'.format(target_audience),
      'Miscellaneous'),
 ]
 
@@ -179,9 +207,11 @@ epub_copyright = copyright
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
+# -- unicode substitutions -- because PDF converter can't handle unicode bunnies
 
-# -- support both RST and Markdown --- 
+# -- support both RST and Markdown ---
 from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -189,6 +219,28 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
-# -- unicode substitutions -- because PDF converter can't handle unicode bunnies
+# Enables Jinja templating of files prior to rendering.
+# http://ericholscher.com/blog/2016/jul/25/integrating-jinja-rst-sphinx/
 
+global_substitutions = {
+  'target_audience': target_audience,
+  'target_audience_lower': target_audience_lower,
+  }
 
+def render_jinja(app, docname, source):
+    """
+    Process pages through Jinja for templating.
+    """
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.global_substitutions
+    )
+    source[0] = rendered
+
+def setup(app):
+    app.add_config_value(
+            'global_substitutions',
+            global_substitutions,
+            True
+            )
+    app.connect("source-read", render_jinja)
