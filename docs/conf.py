@@ -26,10 +26,10 @@ from docutils.transforms import Transform
 #
 # $ export TARGET_AUDIENCE="Campaign"
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if on_rtd and 'davedittrich' in os.environ.get('READTHEDOCS_PROJECT'):
-    os.environ['TARGET_AUDIENCE'] = "Campaign"
-
-target_audience = os.environ.get('TARGET_AUDIENCE', "Newsroom")
+if on_rtd:
+    target_audience = os.environ.get('READTHEDOCS_PROJECT').split('-')[-1].title()
+else:
+    target_audience = os.environ.get('TARGET_AUDIENCE', "Newsroom")
 target_audience_lower = target_audience.lower()
 
 rst_prolog = """
