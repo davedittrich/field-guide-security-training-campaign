@@ -13,7 +13,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-# import sys
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 from docutils import nodes
@@ -25,6 +25,9 @@ from docutils.transforms import Transform
 # to control the target audience label.
 #
 # $ export TARGET_AUDIENCE="Campaign"
+sys.stdout.write("READTHEDOCS={}".format(os.environ.get('READTHEDOCS'))
+sys.stdout.write("READTHEDOCS_PROJECT={}".format(os.environ.get('READTHEDOCS_PROJECT'))
+
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
     target_audience = os.environ.get('READTHEDOCS_PROJECT').split('-')[-1].title()
