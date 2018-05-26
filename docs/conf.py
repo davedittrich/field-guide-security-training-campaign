@@ -25,6 +25,10 @@ from docutils.transforms import Transform
 # to control the target audience label.
 #
 # $ export TARGET_AUDIENCE="Campaign"
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd and os.environ.get('READTHEDOCS_PROJECT').startswith("davedittrich"):
+    os.environ['TARGET_AUDIENCE'] = "Campaign"
+
 target_audience = os.environ.get('TARGET_AUDIENCE', "Newsroom")
 target_audience_lower = target_audience.lower()
 
