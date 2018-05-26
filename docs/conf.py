@@ -26,7 +26,7 @@ from docutils.transforms import Transform
 #
 # $ export TARGET_AUDIENCE="Campaign"
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if on_rtd and os.environ.get('READTHEDOCS_PROJECT').startswith("davedittrich"):
+if on_rtd and 'davedittrich' in os.environ.get('READTHEDOCS_PROJECT'):
     os.environ['TARGET_AUDIENCE'] = "Campaign"
 
 target_audience = os.environ.get('TARGET_AUDIENCE', "Newsroom")
