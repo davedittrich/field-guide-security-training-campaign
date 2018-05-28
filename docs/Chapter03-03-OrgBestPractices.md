@@ -1,8 +1,6 @@
 {% if target_audience != "Newsroom" %}
 # Best Practices for a Tips Page (NA for {{ target_audience }}s)
 
-.. note::
-
     This chapter is only applicable to Newsrooms. It is not included
     in this version of the guide.
 
