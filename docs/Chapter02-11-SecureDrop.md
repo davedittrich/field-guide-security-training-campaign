@@ -1,3 +1,6 @@
+{% if target_audience != "Newsroom" %}
+# Using SecureDrop Safely (NA for {{ target_audience }}s)
+{% else %}
 # Using SecureDrop Safely
 
 ## Overview
@@ -148,4 +151,4 @@ SecureDrop's requirements might make it not the best fit for your {{ target_audi
 
 **More Training Resources**<br />
 [*https://docs.securedrop.org/*](https://docs.securedrop.org/) - The official documentation site for SecureDrop, maintained by the Freedom Of The Press Foundation.
-
+{% endif %}
