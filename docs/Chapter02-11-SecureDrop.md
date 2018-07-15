@@ -1,6 +1,13 @@
+{% if target_audience != "Newsroom" %}
+# Using SecureDrop Safely (NA for {{ target_audience }}s)
+
+    This chapter is only applicable to Newsrooms. It is not included
+    in this version of the guide.
+
+{% else %}
 # Using SecureDrop Safely
 
-## Overview 
+## Overview
 
 SecureDrop is an anonymous whistleblowing tool, built on well-tested cryptographic technologies, and designed to provide its users with a high degree of protection from detection through Internet-based surveillance. This lesson plan covers what you'll need to know to use SecureDrop effectively: establishing a culture of security, setting up SecureDrop securely, and making sure your sources know how to use it safely.
 
@@ -11,7 +18,7 @@ SecureDrop is an anonymous whistleblowing tool, built on well-tested cryptograph
 **Level** (advanced)<br />
 
 **What will participants learn?**<br />
-At the end of this session, participants will have a general understanding of how SecureDrop works, what is required to install it, and its strengths and limitations. 
+At the end of this session, participants will have a general understanding of how SecureDrop works, what is required to install it, and its strengths and limitations.
 
 **What materials will participants need?**<br />
 A laptop, pen, paper.
@@ -56,13 +63,13 @@ SecureDrop started off as DeadDrop, a whistleblowing system developed by Aaron S
 
 3.  and it isolates critical components from any networks.
 
-These features make SecureDrop a powerful tool, but they also impose strict requirements on how the system is implemented and used. If basic digital security practices are not already being followed in your newsroom, the safety of leaked documents can't be guaranteed to any reasonable level. You'll need to make sure that people have the tools and knowledge to protect their devices and data, by creating a culture of security that emphasizes best practices and includes everybody working with leaked documents. You'll need to set SecureDrop up securely, to reduce the risk of an implementation flaw compromising your sources. Finally, you'll need to provide information to your sources to help them use it safely.. 
+These features make SecureDrop a powerful tool, but they also impose strict requirements on how the system is implemented and used. If basic digital security practices are not already being followed in your {{ target_audience_lower }}, the safety of leaked documents can't be guaranteed to any reasonable level. You'll need to make sure that people have the tools and knowledge to protect their devices and data, by creating a culture of security that emphasizes best practices and includes everybody working with leaked documents. You'll need to set SecureDrop up securely, to reduce the risk of an implementation flaw compromising your sources. Finally, you'll need to provide information to your sources to help them use it safely..
 
 ### A culture of security
 
 In order to use SecureDrop, and provide a reasonable guarantee of security for high-risk sources, you should already have some digital-security tools and policies in place.
 
-*\[Discussion: Instructor could ask why this would be important - a good answer would be because leaked documents need to be secured and handled safely within the newsroom, no matter what the source.\]*
+*\[Discussion: Instructor could ask why this would be important - a good answer would be because leaked documents need to be secured and handled safely within the {{ target_audience_lower }}, no matter what the source.\]*
 
 At a minimum:
 
@@ -79,7 +86,7 @@ At a minimum:
 
 Your organization should have existing policies for the sharing and storage of sensitive information (and if it doesn't, you need to create them). These should be reviewed and updated as necessary to cover digital documents. One important thing to consider in this updated policy is whether to reveal the use of SecureDrop in a story. In general, this is not recommended, as it may provide correlating information for someone trying to uncover an anonymous source, but every story is different.
 
-SecureDrop is built on TOR and Onion services - you'll need to make sure that people who will be using the system know how to use the TOR Browser safely. For more information, see the Tor Project's documentation, starting here: [https://www.torproject.org/about/overview.html.en](https://www.torproject.org/about/overview.html.en). 
+SecureDrop is built on TOR and Onion services - you'll need to make sure that people who will be using the system know how to use the TOR Browser safely. For more information, see the Tor Project's documentation, starting here: [https://www.torproject.org/about/overview.html.en](https://www.torproject.org/about/overview.html.en).
 
 
 ### Setting up SecureDrop
@@ -97,7 +104,7 @@ A SecureDrop installation has two major components:
 During setup, an encryption keypair is generated for use by the SecureDrop installation - the public key is used by the hidden services to encrypt submissions, while the private key is stored on the SVS and is used by journalists to decrypt the same files. Because the SVS contains the only copy of the private key, it is critical to keep it secure and limit access. As such, the two system components have stringent physical security requirements.
 
 **Public-facing services**<br />
-The public-facing services component includes two servers (typically consumer-grade micro-PCs), a network switch/firewall, and a dedicated Internet connection. Sources use it to upload documents, journalists use it to download uploaded files. You should keep these servers somewhere you can control and monitor, preferably on-site. If they're kept off-site, for example in your datacenter, your hosting company may be legally compelled to give 3rd parties access to them without your knowledge. If a 3rd party has access to these servers, they'll be able to monitor incoming communications, which may compromise your sources. 
+The public-facing services component includes two servers (typically consumer-grade micro-PCs), a network switch/firewall, and a dedicated Internet connection. Sources use it to upload documents, journalists use it to download uploaded files. You should keep these servers somewhere you can control and monitor, preferably on-site. If they're kept off-site, for example in your datacenter, your hosting company may be legally compelled to give 3rd parties access to them without your knowledge. If a 3rd party has access to these servers, they'll be able to monitor incoming communications, which may compromise your sources.
 
 **Secure viewing station**<br />
 The SVS is an airgapped computer. It's not connected to any network, and ideally has no network or wifi hardware at all. It must be kept in a secure location, and access to it must be strictly limited to the people tasked with downloading and decrypting submissions. When it comes to the SVS, you should be as paranoid as your budget allows. If the SVS is compromised and the private key copied, all your SecureDrop submissions, past and future, can be decrypted.
@@ -109,13 +116,13 @@ To maintain and use SecureDrop safely, you'll need to find people in your organi
 
 - User admin - they'll be responsible for managing journalist access to the system. They should not have unsupervised access to the servers or SVS.
 
-- Journalist - they'll be responsible for checking for submissions and decrypting them via the SVS. They should have access to the SVS but do not need access to the public-facing servers. 
+- Journalist - they'll be responsible for checking for submissions and decrypting them via the SVS. They should have access to the SVS but do not need access to the public-facing servers.
 
-There is no technical restriction on the number of journalists that can be given access to the system, but you should decide how you want to manage access. The more people who have access, the harder it is to secure the SVS. Typically, most organizations will designate a small team of journalists to check the system periodically, relying on them and their editors to pass along any submissions to the appropriate destination in the newsroom.
+There is no technical restriction on the number of journalists that can be given access to the system, but you should decide how you want to manage access. The more people who have access, the harder it is to secure the SVS. Typically, most organizations will designate a small team of journalists to check the system periodically, relying on them and their editors to pass along any submissions to the appropriate destination in the {{ target_audience_lower }}.
 
 ### Help your sources use SecureDrop safely
 
-Used properly, SecureDrop makes it difficult to intercept communications between you and your sources, but it doesn't work in a vacuum. If your newsroom network or personal computers are compromised, this puts submitted documents at risk. Similarly, if your sources don't take precautions on their end, they may compromise themselves by contacting you. When you provide a link to your SecureDrop instance, whether publicly or privately, you should also provide instructions for sources on using it safely.
+Used properly, SecureDrop makes it difficult to intercept communications between you and your sources, but it doesn't work in a vacuum. If your {{ target_audience_lower }} network or personal computers are compromised, this puts submitted documents at risk. Similarly, if your sources don't take precautions on their end, they may compromise themselves by contacting you. When you provide a link to your SecureDrop instance, whether publicly or privately, you should also provide instructions for sources on using it safely.
 
 *\[Discussion: Instructor should ask participants, given what they know already, what kind of risks a source might face while submitting documents to SecureDrop.\]*
 
@@ -128,14 +135,15 @@ At a minimum, sources need to be aware of these basic points:
 High-risk sources need to take more precautions. The SecureDrop Source Guide ([https://docs.securedrop.org/en/stable/source.html](https://docs.securedrop.org/en/stable/source.html)) provides a comprehensive guide for sources looking to protect themselves against surveillance by state-level actors.
 
 
+{% if target_audience == "Newsroom" %}
 ### Alternatives
-SecureDrop's requirements might make it not the best fit for your newsroom. In particular, if you can't guarantee the physical security of the public-facing servers or the air-gapped SVS, you should consider other options to support anonymous sources. Traditional methods such as postal mail still work, if sources take the appropriate precautions. One option worth considering is a newsroom dropbox using Signal, the encrypted messaging platform written and maintained by Open Whisper Systems. Barton Gellmann has written a guide on using Signal as a newsroom dropbox, which you can find here: [https://github.com/b4rton/signal-newsroom/blob/master/README.md](https://github.com/b4rton/signal-newsroom/blob/master/README.md). For more information on the risks and benefits of alternative whistleblowing methods, see [Opening Secure Channels for Confidential Tips](https://source.opennews.org/articles/opening-secure-channels-confidential-tips/).
-
+SecureDrop's requirements might make it not the best fit for your {{ target_audience_lower }}. In particular, if you can't guarantee the physical security of the public-facing servers or the air-gapped SVS, you should consider other options to support anonymous sources. Traditional methods such as postal mail still work, if sources take the appropriate precautions. One option worth considering is a {{ target_audience_lower }} dropbox using Signal, the encrypted messaging platform written and maintained by Open Whisper Systems. Barton Gellmann has written a guide on using Signal as a {{ target_audience_lower }} dropbox, which you can find here: [https://github.com/b4rton/signal-newsroom/blob/master/README.md](https://github.com/b4rton/signal-newsroom/blob/master/README.md). For more information on the risks and benefits of alternative whistleblowing methods, see [Opening Secure Channels for Confidential Tips](https://source.opennews.org/articles/opening-secure-channels-confidential-tips/).
 
 ### (Optional) SecureDrop Demo
 
 *\[Practical: Instructor should guide participants through the process of submitting to SecureDrop, using the FPF demo instance at [https://securedrop.org/demo](https://securedrop.org/demo). Participants should play the role of sources, using the source interface to send one or more messages. The instructor should have already configured their access to the demo instance's Journalist interface and be able to decrypt submissions.\]*
- 
+{% endif %}
+
 ## Recommended Reading
 
 **Links in the news**<br />
@@ -147,4 +155,4 @@ SecureDrop's requirements might make it not the best fit for your newsroom. In p
 
 **More Training Resources**<br />
 [*https://docs.securedrop.org/*](https://docs.securedrop.org/) - The official documentation site for SecureDrop, maintained by the Freedom Of The Press Foundation.
-
+{% endif %}

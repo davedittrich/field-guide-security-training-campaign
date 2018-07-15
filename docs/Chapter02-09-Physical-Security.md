@@ -79,7 +79,7 @@ You can mitigate what is available without your permission. But "mitigation" is 
 
 + Minimize the data available without your permission with full disk encryption, but know that you may not always be able to cross international borders without unlocking a device. The EFF has a good overview of [your rights at the US border](https://www.eff.org/wp/digital-privacy-us-border-2017#part-2). *Trainer Note: it is easy to slip into a debate about what the border patrol is likely to do, or a story swapping session about horrible things that have happened. Try to "park" those stories in a "parking lot" for discussion another time.*
 
-+ Call a lawyer. If your newsroom has staff attorneys, touch base with them before you travel.
++ Call a lawyer. If your {{ target_audience_lower }} has staff attorneys, touch base with them before you travel.
 
   + Some attorneys recommend telling the border agents that your device contains trade secrets and you're not authorized to authorize a search. That obviously only applies if it is true, but if you have company correspondence or documents on your phone it probably is true. <br />
 

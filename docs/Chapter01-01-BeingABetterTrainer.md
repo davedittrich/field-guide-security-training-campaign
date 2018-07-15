@@ -29,8 +29,7 @@ There are lots of great resources in the introduction that can help you facilita
 + It's okay to be nervous. Take a deep breath, make sure you have water handy, and you'll do fine.
 
 
-If the group is larger than your own newsroom, definitely establish a code of conduct and some ground rules about photos and [quoting folks](https://www.chathamhouse.org/about/chatham-house-rule).
-
+If the group is larger than your own {{ target_audience_lower}}, definitely establish a code of conduct and some ground rules about photos and [quoting folks](https://www.chathamhouse.org/about/chatham-house-rule).
 
 ## After: Follow Up!
 

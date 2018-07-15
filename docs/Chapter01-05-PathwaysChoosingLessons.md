@@ -1,8 +1,8 @@
 # Pathways: Choosing Lesson Plans
 
-There is a lot of material in this guide -- and a lot of different ways to approach it. The guide is designed to be modular. Lessons are ordered so that ones that tend to appear as pre-requisites come first, but some newsrooms already enforce two-factor authentication or support a preferred password manager, while others leave it to individual reporters to find their way.
+There is a lot of material in this guide -- and a lot of different ways to approach it. The guide is designed to be modular. Lessons are ordered so that ones that tend to appear as pre-requisites come first, but some {{ target_audience_lower }}s already enforce two-factor authentication or support a preferred password manager, while others leave it to individual reporters to find their way.
 
-Some users will want to lead a formal series of in-depth workshops, while others will respond to a specific newsroom need or just offer an occasional lunch hour session. Either way, less can be more. Rather than trying to cram everything into a marathon workshop, break goals down into short walks that build on each other, and let each tool sink in before adding another. Participants shouldn't leave with more than one or two projects on their to-do list. 
+Some users will want to lead a formal series of in-depth workshops, while others will respond to a specific {{ target_audience_lower }} need or just offer an occasional lunch hour session. Either way, less can be more. Rather than trying to cram everything into a marathon workshop, break goals down into short walks that build on each other, and let each tool sink in before adding another. Participants shouldn't leave with more than one or two projects on their to-do list.
 
 ## Sample Pathways
 
@@ -20,4 +20,8 @@ Some users will want to lead a formal series of in-depth workshops, while others
 3. [Two-factor Authentication](Chapter02-07-Two-Factor-Authentication.html)
 4. [Phishing](Chapter02-08-Phishing.html)
 
-Savvy readers will note that this guide doesn't currently include a guide to encrypting email with GPG or PGP. Why? It's hard to use and history has shown that most folks don't use it properly. As Martin Shelton has pointed out, [newsrooms have better options](https://source.opennews.org/articles/how-lose-friends-and-anger-journalists-pgp/).
+{% if target_audience == "Newsroom" %}
+Savvy readers will note that this guide doesn't currently include a guide to encrypting email with GPG or PGP. Why? It's hard to use and history has shown that most folks don't use it properly. As Martin Shelton has pointed out, [{{ target_audience_lower }}s have better options](https://source.opennews.org/articles/how-lose-friends-and-anger-journalists-pgp/).
+{% endif %}
+
+{# TODO(dittrich): Add GPG support info for Trident portal/Campaigns #}

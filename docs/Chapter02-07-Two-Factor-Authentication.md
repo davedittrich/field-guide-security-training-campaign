@@ -23,7 +23,8 @@ They’ll need their mobile devices (iPhone or Android) and laptop computers.
 
 **How should participants prepare?**
 Have participants read [Two-Factor Authentication for
-Newsrooms](https://source.opennews.org/articles/two-factor-authentication-newsrooms/) and [The 12 Days of 2FA: How to Enable Two-Factor Authentication For Your Online Accounts](https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts)—both are good overviews of the process.
+{# TODO(dittrich): Turn this into a relative, rather than absolute, link #}
+{{ target_audience }}s](https://source.opennews.org/articles/two-factor-authentication-newsrooms/) and [The 12 Days of 2FA: How to Enable Two-Factor Authentication For Your Online Accounts](https://www.eff.org/deeplinks/2016/12/12-days-2fa-how-enable-two-factor-authentication-your-online-accounts)—both are good overviews of the process.
 
 If folks will be sharing unreliable wifi (eg. if you're at a conference center or hotel) encourage folks to install your preferred authenticator app in advance of the workshop. Make sure to include install links for iOS and Android versions in your pre-workshop communications.<br />
 
@@ -54,7 +55,7 @@ When you follow up after the workshop, remind folks to confirm that the spot the
 
 If someone gains access to your primary email account, they can easily use that access to reset passwords and take over your other accounts. Two-factor authentication (2FA), along with [strong passwords](Chapter02-06-Passwords.html) and alertness to [phishing](Chapter02-08-Phishing.html), will go a long way towards protecting your online accounts. So have everyone start by identifying their primary email account and setting up 2FA there. Single Sign-On (SSO) accounts, used for logging into multiple services, are also a high priority. Common examples of accounts used for SSO include Google, Facebook, Twitter, and Github. If someone is able to take over your Facebook account, that may give them a back door to all kinds of other accounts and services.
 
-Note: it's easy to get lost in a "is this really going to happen to me?" spiral, or a "sure, but what's the worst that could happen" discussion. Some clarity about what is at stake is certainly valuable but it probably isn't useful to get to caught up in horror stories. Remind folks that 2FA is relatively straightforward once it is part of your workflow. You can either get in the habit of carrying your keys and locking the door behind you, or you can stop and think everytime you leave the house "Have I left anything valuable out? What are the odds that someone will break in today?" [Mat Honan](https://www.wired.com/2012/08/apple-amazon-mat-honan-hacking/) lost a lot of personal archives because some hackers wanted his Twitter handle. For a while hackers were doing a good job of taking over email accounts to send out desperate pleas for money—"Help, I'm traveling and I was hit by a car and I can't reach my parents, but I desperately need you to wire $400 to this random stranger so I can pay my hospital bill and come home."—even though the apparent sender was safe at home. If you work in a newsroom with someone working on sensitive investigations, if anyone who trusts you is doing sensitive work, you owe it to them to ensure that you're not the vector for an attack.
+Note: it's easy to get lost in a "is this really going to happen to me?" spiral, or a "sure, but what's the worst that could happen" discussion. Some clarity about what is at stake is certainly valuable but it probably isn't useful to get to caught up in horror stories. Remind folks that 2FA is relatively straightforward once it is part of your workflow. You can either get in the habit of carrying your keys and locking the door behind you, or you can stop and think everytime you leave the house "Have I left anything valuable out? What are the odds that someone will break in today?" [Mat Honan](https://www.wired.com/2012/08/apple-amazon-mat-honan-hacking/) lost a lot of personal archives because some hackers wanted his Twitter handle. For a while hackers were doing a good job of taking over email accounts to send out desperate pleas for money—"Help, I'm traveling and I was hit by a car and I can't reach my parents, but I desperately need you to wire $400 to this random stranger so I can pay my hospital bill and come home."—even though the apparent sender was safe at home. If you work in a {{ target_audience_lower }} with someone working on sensitive investigations, if anyone who trusts you is doing sensitive work, you owe it to them to ensure that you're not the vector for an attack.
 
 There's very good reason to believe that the Clinton email hack was made possible because [John Podesta didn't have 2FA turned on](http://fortune.com/2016/10/29/clinton-email-phishing-attack/). Don't be John Podesta. He fell for a spearphishing scam that told him he needed to change his password. With 2FA enabled, just knowing his new password wouldn't be enough to give a hacker access to his emails.
 
@@ -104,7 +105,7 @@ Some web services let you attach multiple authentication apps to the same accoun
 Unlike SMS messages, authenticator apps aren't vulnerable to attacks against your mobile network.
 
 **Even Better Option - Security Keys:**
-A security key is a physical device, usually connected via USB, that you can use to authenticate your account.
+A security key is a physical device that you can use to authenticate your account. They can connect to computers and laptops via USB, or to mobile devices that support Near-Field Communication (NFC). Security keys can be used to produce cryptographically secure values that work in combination with your password, or may be [used as a storage device for GNU Privacy Guard (GPG) or Secure Shell (SSH) keys](https://github.com/drduh/YubiKey-Guide).
 
 They’re reasonably cheap — one of the most popular options, a [Yubikey](https://www.yubico.com/) costs
 [$18](https://www.amazon.com/Yubico-Y-123-FIDO-U2F-Security/dp/B00NLKA0D8/).
@@ -169,8 +170,9 @@ Yubikey](https://www.yubico.com/product/yubikey-4-series/#yubikey-4c).
 ## Recommended Reading
 
 + EFF's Security Education Companion has a great [Two Factor Authentication](https://sec.eff.org/topics/two-factor-authentication) lesson.
+{# TODO(dittrich): Turn this into a relative, rather than absolute, link #}
 + [Two-Factor Authentication for
-Newsrooms](https://source.opennews.org/articles/two-factor-authentication-newsrooms/)
+{{ target_audience }}s](https://source.opennews.org/articles/two-factor-authentication-newsrooms/)
 
 + [London Calling: Two-Factor Authentication Phishing From Iran](https://citizenlab.org/2015/08/iran_two_factor_phishing/) from Citizen Lab (Munk School of Global Affairs, University of Toronto) is a good roundup of ways that really good phishing can circumvent 2FA. (August 2015)
 + [Phishers rip into two-factor authentication](https://www.theregister.co.uk/2017/05/03/hackers_fire_up_ss7_flaw/), *The Register* also covers some ways that phishing can be used to circumvent 2FA. (July 2006)

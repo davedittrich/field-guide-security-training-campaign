@@ -35,14 +35,16 @@ Example: [*BBC: Why printers add secret tracking dots*](http://www.bbc.com/futur
 
 *\[Discussion point: Instructor should ask participants how and when they share documents that they obtained from a source, and what the potential risks are in doing so. Then, if they didn't come up, the instructor should cover the 3 points below. \]*
 
-**Sharing outside the newsroom**<br />
+**Sharing outside the {{ target_audience_lower }}**<br />
 When you share or publish information obtained from a source, a good rule of thumb is to only share the minimum amount of information necessary to tell a story. In the most extreme case, for example, simply cutting and pasting document text into a plaintext file effectively removes all digital metadata. There may be cases where this isn't feasible, for example, when you're sharing a document with a third party to verify its authenticity. Even then, simply sharing the original document may expose your source, so it's important to remove any file metadata that you can.
 
-**Sharing within the newsroom**<br />
-Even for documents not shared outside the newsroom, removing metadata before sharing with colleagues reduces the risk of an accidental or malicious leak of source information.
+**Sharing within the {{ target_audience_lower }}**<br />
+Even for documents not shared outside the {{ target_audience_lower }}, removing metadata before sharing with colleagues reduces the risk of an accidental or malicious leak of source information.
 
+{% if target_audience == "Newsroom" %}
 **Publishing documents with a story**<br />
 Redaction of information within documents may be necessary before distribution, and it’s important that this be done irreversibly. Some document formats include revision histories, others may still contain text that has been graphically obscured. Metadata scrubbing techniques work well here too. More sophisticated methods of watermarking documents, such as graphical watermarks or typographical variations, may also require a reconstruction of the document be made for publication, as the risk of publishing even the redacted original would be too great.
+{% endif %}
 
 **Removing Metadata**<br />
 Metadata-removal software exists, but a simpler  approach is to print out a sensitive document, scan it back into your computer and rename the file. Similarly, you can remove metadata from an image or photograph by screenshotting the original and sharing the copy only. (Note that color printers may add nearly-invisible metadata to printed pages as an anti-counterfeiting measure. Printing documents in black and white reduces the chance of exposure.)
